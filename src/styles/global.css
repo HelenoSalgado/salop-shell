@@ -29,7 +29,7 @@ window{
     font-weight: normal;
 }
 
-.mpris > button, .brightness > button, .audio-output > button, .wireless, .clock > button, .shutdown > button{
+.mpris > button, .brightness > button, .audio-output > button, .wireless, .clock > button, .shutdown > button, .menu-shutdown button{
     background: #21232e;
     padding: 3px 10px;
     border-radius: 7px;
@@ -38,8 +38,11 @@ window{
     border: none;
     font-weight: normal;
 }
+.shutdown > button{
+    color: indianred;
+}
 
-.workspaces button:hover{
+.workspaces button:hover, .menu-shutdown button:hover{
     box-shadow: inherit;
     text-shadow: inherit;
     color: #21232e;
@@ -60,9 +63,17 @@ tooltip{
   padding: 10px 5px;
 }
 
+.menu-shutdown{
+    padding: 15px 10px 10px 10px;
+}
+
+.menu-shutdown label{
+    color: #21232e;
+    margin: 0 7px;
+}
 .menu-shutdown button{
-    padding: 10px 5px;
-    margin: 10px;
+    margin: 0 7px;
+    padding: 7px 0;
 }
 
 .item-app{

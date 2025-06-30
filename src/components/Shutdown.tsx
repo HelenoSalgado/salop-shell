@@ -5,11 +5,8 @@ export default function Shutdown() {
   return (
     <menubutton class="shutdown" tooltipText="Desligar">
       <image iconName="system-shutdown-symbolic"/>
-      <popover
-        widthRequest={300}
-        heightRequest={300}
-      >
-        <box class="menu-shutdown" marginTop={100}>
+      <popover>
+        <box class="menu-shutdown">
           <box orientation={Gtk.Orientation.VERTICAL} $type="start" hexpand>
             <button
               onClicked={() => exec(`systemctl suspend`)}>

@@ -10,7 +10,6 @@ import Shutdown from "../components/Shutdown"
 import OsLogo from "../components/OsLogo"
 import BrightnessSlider from "../components/Brightness"
 import Mpris from "../components/Mpris"
-import Tray from "../components/Tray"
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
@@ -31,7 +30,6 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
           </box>
           <FocusedClient $type="center"/>
           <box $type="end" class="buttons-tools">
-            <Tray />
             <Mpris />
             <BrightnessSlider/>
             <AudioOutput />

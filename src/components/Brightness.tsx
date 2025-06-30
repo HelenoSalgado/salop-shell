@@ -13,8 +13,7 @@ export default function BrightnessSlider() {
     <label label={createBinding(brightness, "screen").as(fn => Math.floor(fn * 100).toString() + "%")}/>
     <popover>
       <slider
-        class="slider"
-        widthRequest={100}
+        widthRequest={260}
         value={createBinding(brightness, "screen")}
         onValueChanged={({ value }) => brightness.screen = value}
       />

@@ -1,0 +1,21 @@
+{
+  "name": "salop-shell",
+  "dependencies": {
+    "ags": "*"
+  },
+  "scripts": {
+      "build": "ags bundle src/app.ts ./dist/app.js",
+      "start": "ags run --define DEBUG=true src/app.ts",
+      "dev": "nodemon --exec 'npm run build && npm run start'"
+  },
+  "nodemonConfig": {
+      "ext": "tsx,ts,css",
+      "watch": [
+          "src/"
+      ],
+      "delay": "2500"
+  },
+  "devDependencies": {
+      "nodemon": "^3.1.10"
+  }
+}

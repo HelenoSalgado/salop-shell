@@ -1,0 +1,80 @@
+:root {
+    --fg-color: #fff;
+    --bg-color: #1d1f28;
+    --bg-bar-range: blue;
+    --transparent: transparent;
+    --soft-destaque: #89b4fa;
+}
+
+* {
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+}
+
+window{
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    padding: 7px 2px;
+    background-color: var(--bg-color);
+}
+
+.workspaces button{
+    background: #21232e;
+    padding: 3px 10px;
+    border-radius: 7px;
+    margin: 0 7px;
+    color: #89b4fa;
+    border: none;
+    font-weight: normal;
+}
+
+.mpris > button, .brightness > button, .audio-output > button, .wireless, .clock > button, .shutdown > button{
+    background: #21232e;
+    padding: 3px 10px;
+    border-radius: 7px;
+    margin: 0 7px;
+    color: #89b4fa;
+    border: none;
+    font-weight: normal;
+}
+
+.workspaces button:hover{
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #21232e;
+    background-color: #89b4fa;
+}
+
+.logo-system{
+    margin: 0 10px 0 5px;
+}
+
+.focused label{
+    color: #fff;
+}
+
+tooltip{
+  background-color: var(--bg-color);
+  border: 2px solid #1d1f28;
+  padding: 10px 5px;
+}
+
+.menu-shutdown button{
+    padding: 10px 5px;
+    margin: 10px;
+}
+
+.item-app{
+    border-radius: 7px;
+    padding: 3px 5px;
+    font-size: 18px;
+}
+
+.search{
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--fg-color);
+}

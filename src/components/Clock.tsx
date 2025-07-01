@@ -9,7 +9,10 @@ export default function Clock({ format = "%H:%M" }) {
 
   return (
     <menubutton class="clock">
-      <label label={time} />
+      <box>
+        <image iconName="preferences-system-time-symbolic"/>
+        <label label={time} />
+      </box>
       <popover>
         <Gtk.Calendar />
       </popover>

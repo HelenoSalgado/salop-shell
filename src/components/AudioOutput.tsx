@@ -6,8 +6,10 @@ export default function AudioOutput() {
 
   return (
     <menubutton class="audio-output">
-      <image iconName={createBinding(speaker, "volumeIcon")} />
-      <label label={createBinding(speaker, "volume").as((n) => Math.floor(n * 100).toString() + "%")}/>
+      <box>
+        <image iconName={createBinding(speaker, "volumeIcon")} />
+        <label label={createBinding(speaker, "volume").as((n) => Math.floor(n * 100).toString() + "%")}/>
+      </box>
       <popover>
           <slider
             widthRequest={260}

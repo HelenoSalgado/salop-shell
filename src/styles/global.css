@@ -16,12 +16,13 @@ window{
     transition-property: background-color;
     transition-duration: 0.5s;
     padding: 7px 2px;
+}
+window.Bar{
     background-color: var(--bg-color);
 }
-
 .workspaces button{
     background: #21232e;
-    padding: 3px 10px;
+    padding: 3px 7px;
     border-radius: 7px;
     margin: 0 7px;
     color: #89b4fa;
@@ -31,7 +32,7 @@ window{
 
 .mpris > button, .brightness > button, .audio-output > button, .wireless, .clock > button, .shutdown > button, .menu-shutdown button{
     background: #21232e;
-    padding: 3px 10px;
+    padding: 2px 7px;
     border-radius: 7px;
     margin: 0 7px;
     color: #89b4fa;
@@ -40,6 +41,10 @@ window{
 }
 .shutdown > button{
     color: indianred;
+}
+
+label{
+    margin: 0 7px;
 }
 
 .workspaces button:hover, .menu-shutdown button:hover{

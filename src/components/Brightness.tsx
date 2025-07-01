@@ -9,8 +9,10 @@ export default function BrightnessSlider() {
   
   return (
     <menubutton class="brightness" tooltipText="Controle de Brilho">
-    <image iconName="display-brightness-symbolic"/> 
-    <label label={createBinding(brightness, "screen").as(fn => Math.floor(fn * 100).toString() + "%")}/>
+      <box>
+        <image iconName="display-brightness-symbolic"/> 
+        <label label={createBinding(brightness, "screen").as(fn => Math.floor(fn * 100).toString() + "%")}/>
+      </box>
     <popover>
       <slider
         widthRequest={260}

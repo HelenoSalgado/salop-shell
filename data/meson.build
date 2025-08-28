@@ -1,20 +1,3 @@
-gnome.compile_resources(
-  name,
-  'data.gresource.xml',
-  source_dir: '.',
-  gresource_bundle: true,
-  install: true,
-  install_dir : pkgdatadir
-)
-
-configure_file(
-  input: 'gschema.xml',
-  output: app_id + '.gschema.xml',
-  configuration: {'resource': resource, 'domain': app_id},
-  install: true,
-  install_dir: datadir / 'glib-2.0' / 'schemas',
-)
-
 i18n.merge_file(
 	input: configure_file(
 		input: 'metainfo.xml',
@@ -27,7 +10,6 @@ i18n.merge_file(
 	install: true,
 	install_dir: datadir / 'metainfo'
 )
-
 
 dbusservicedir = join_paths(datadir, 'dbus-1', 'services')
 configure_file(

@@ -1,7 +1,6 @@
-import { createBinding, For, With } from "ags";
+import { createBinding } from "ags";
 import { exec } from "ags/process";
 import AstalNetwork from "gi://AstalNetwork?version=0.1";
-import Gtk from "gi://Gtk?version=4.0";
 
 export default function Wireless() {
   const network = AstalNetwork.get_default();

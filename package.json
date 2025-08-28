@@ -1,21 +1,56 @@
 {
-  "name": "salop-shell",
+  "type": "module",
+  "name": "salop-bar",
+  "repository": {
+    "directory": "salopbar",
+    "url": "https://github.io/HelenoSalgado",
+    "type": "git"
+  },
+  "keywords": [
+    "hyprland",
+    "arch linux",
+    "bar",
+    "gjs",
+    "ags"
+  ],
+  "description": "Uma barra de navegação simples para Arch Linux + Hyprland",
+  "version": "0.0.0",
+  "author": {
+    "name": "Heleno Salgado",
+    "url": "https://heleno.dev"
+  },
+  "engines": {
+    "gjs": ">=1.79.0"
+  },
+  "os": [
+    "linux"
+  ],
+  "bundleDependencies": [
+    "ags"
+  ],
   "dependencies": {
     "ags": "*"
   },
   "scripts": {
-      "build": "ags bundle src/app.ts ./dist/app.js",
-      "start": "ags run --define DEBUG=true src/app.ts",
-      "dev": "nodemon --exec 'npm run start'"
+    "build:install": "npm install && arch-meson build && meson install -C build",
+    "build:test": "meson setup --prefix \"$(pwd)/dist\" --reconfigure build && meson install -C build",
+    "start:dev": "ags run --gtk 4 --define DEBUG=true src/main.ts"
   },
   "nodemonConfig": {
-      "ext": "tsx,ts,css",
-      "watch": [
-          "src/"
-      ],
-      "delay": "3500"
+    "ext": "tsx,ts,css",
+    "watch": [
+      "src/"
+    ],
+    "delay": "3500"
   },
   "devDependencies": {
-      "nodemon": "^3.1.10"
+    "@eslint/js": "latest",
+    "@girs/adw-1": "latest",
+    "@types/node": "^24.3.0",
+    "esbuild": "^0.25.9",
+    "eslint": "latest",
+    "nodemon": "^3.1.10",
+    "typescript": "latest",
+    "typescript-eslint": "latest"
   }
 }

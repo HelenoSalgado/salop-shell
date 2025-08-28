@@ -13,7 +13,7 @@ export default function AudioOutput() {
       <popover>
           <slider
             widthRequest={260}
-            onChangeValue={({ value }) => speaker.set_volume(value)}
+            onChangeValue={({ value }: {value: string}) => speaker.set_volume(value)}
             value={createBinding(speaker, "volume")}
           />
       </popover>

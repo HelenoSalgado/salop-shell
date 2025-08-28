@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="console-application">
+  <id>@app_id@</id>
+  <name>Salop Bar</name>
+  <summary>A short summary describing what this software is about</summary>
+  <project_license>Sob a licença GPL-3.0-or-later</project_license>
+  <description>
+    <p>Uma barra de navegação simples para Arch Linux + Hyprland</p>
+  </description>
+  <developer>
+    <name>Heleno Salgado</name>
+  </developer>
+  <provides>
+    <binary>@bindir@</binary>
+  </provides>
+  <releases>
+     <release version="0.0.0" date="2025-08-28">
+       <description>
+         <p>Em desenvolvimento</p>
+       </description>
+     </release>
+   </releases>
+</component>

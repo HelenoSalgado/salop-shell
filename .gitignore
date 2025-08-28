@@ -1,2 +1,6 @@
 node_modules/
 @girs/
+build/
+dist/
+.flatpak-builder
+.ropeproject

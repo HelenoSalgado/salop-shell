@@ -1,5 +1,5 @@
 import { monitorFile, readFileAsync } from "ags/file"
-import { property, register } from "ags/gobject"
+import { gtype, register } from "ags/gobject"
 import { exec, execAsync } from "ags/process"
 import GObject from "gi://GObject?version=2.0"
 
@@ -22,7 +22,7 @@ export default class Brightness extends GObject.Object {
     #screenMax = get("max")
     #screen = get("get") / (get("max") || 1)
 
-    //@property(Number)
+    //@gtype(Number)
     get kbd() { return this.#kbd } 
 
     set kbd(value) {

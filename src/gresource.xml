@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+	<gresource prefix="/dev/heleno/SalopBar/js">
+	    <file>main.ts</file>
+		<file>App.ts</file>
+	</gresource>
+</gresources>

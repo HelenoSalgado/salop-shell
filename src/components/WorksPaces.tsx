@@ -1,5 +1,4 @@
 import { createBinding } from "ags";
-import { Astal, Gdk } from "ags/gtk4";
 import Hyprland from "gi://AstalHyprland?version=0.1";
 
 function getClients(){

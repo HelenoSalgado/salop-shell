@@ -1,7 +1,5 @@
 import { createBinding } from "ags";
 import Brightness from "../utils/brightness";
-import { Gtk } from "ags/gtk4";
-import Gio from "gi://Gio?version=2.0";
 
 export default function BrightnessSlider() {
   
@@ -17,7 +15,7 @@ export default function BrightnessSlider() {
       <slider
         widthRequest={260}
         value={createBinding(brightness, "screen")}
-        onValueChanged={({ value }) => brightness.screen = value}
+        onValueChanged={({ value }: {value: number}) => brightness.screen = value}
       />
     </popover>
     </menubutton>

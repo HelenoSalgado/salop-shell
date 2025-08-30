@@ -1,35 +1,28 @@
-project('salopbar', 'c',
-  version: '0.0.0',
-  meson_version: '>= 1.9.0'
-)
+project('salopbar', 'c', version: '0.0.0', meson_version: '>= 1.9.0')
 
-#dependency('gtk4', version: '>=1:4')
+dependency('gtk4')
+dependency('libadwaita-1')
 
-app_id = 'dev.heleno.salopbar'
+dependency('astal-4-4.0')
+dependency('astal-wireplumber-0.1')
+dependency('astal-network-0.1')
+dependency('astal-mpris-0.1')
+dependency('astal-hyprland-0.1')
+dependency('astal-notifd-0.1')
+dependency('astal-apps-0.1')
+
 name = meson.project_name()
-resource = 'dev/heleno/salopbar'
 prefix = get_option('prefix')
-datadir = prefix / get_option('datadir')
-libdir = prefix / get_option('libdir')
+pkgdatadir = prefix / get_option('datadir') / name
 bindir = prefix / get_option('bindir')
-pkgdatadir = datadir / name
-version = meson.project_version()
+layer_shell = dependency('gtk4-layer-shell-0')
+domain = 'dev.heleno.salopbar'
 
 gnome = import('gnome')
 i18n = import('i18n')
-gjs = find_program('gjs')
-GETTEXT_PACKAGE = app_id
-
-app_configuration = configuration_data()
-
-app_configuration.set('GJS', gjs.full_path())
-app_configuration.set('app_id', app_id)
-app_configuration.set('name', name)
-app_configuration.set('version', version)
-app_configuration.set('prefix', prefix)
-app_configuration.set('libdir', prefix / libdir)
-app_configuration.set('pkgdatadir', pkgdatadir)
-app_configuration.set('bindir', bindir)
+gjs = find_program('gjs', required: true)
+esbuild = find_program('esbuild', required: true)
+GETTEXT_PACKAGE = domain
 
 subdir('data')
 subdir('src')
@@ -43,8 +36,8 @@ test(
   ],
 )
 
-import('gnome').post_install(
+gnome.post_install(
   # gtk_update_icon_cache: true,
   glib_compile_schemas: true,
-  update_desktop_database: true,
+  # update_desktop_database: true,
 )

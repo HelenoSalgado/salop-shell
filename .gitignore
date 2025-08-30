@@ -4,3 +4,5 @@ build/
 dist/
 .flatpak-builder
 .ropeproject
+bkp
+bkp-readme.md

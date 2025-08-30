@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="console-application">
-  <id>@app_id@</id>
+  <id>@domain@</id>
   <name>Salop Bar</name>
   <summary>A short summary describing what this software is about</summary>
   <project_license>Sob a licença GPL-3.0-or-later</project_license>

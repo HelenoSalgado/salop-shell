@@ -8,7 +8,6 @@
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
     "jsxImportSource": "ags/gtk4",
-    "removeComments": true,
-    "outDir": "dist"
+    "removeComments": true
   }
 }

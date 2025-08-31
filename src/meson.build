@@ -3,7 +3,7 @@ js = custom_target(
   input: 'main.ts',
   output: 'main.js',
   command: [
-    find_program('../node_modules/.bin/esbuild'),
+    find_program('../node_modules/@esbuild/linux-x64/bin/esbuild'),
     '--bundle', '@INPUT@',
     '--outfile=@OUTPUT@',
     '--external:gi://*',

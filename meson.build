@@ -21,7 +21,6 @@ domain = 'dev.heleno.salopbar'
 gnome = import('gnome')
 i18n = import('i18n')
 gjs = find_program('gjs', required: true)
-esbuild = find_program('esbuild', required: true)
 GETTEXT_PACKAGE = domain
 
 subdir('data')

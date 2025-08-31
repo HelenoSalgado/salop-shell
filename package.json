@@ -29,7 +29,7 @@
     "esbuild"
   ],
   "dependencies": {
-    "ags": "*"
+    "esbuild": "^0.25.9"
   },
   "scripts": {
     "build:install": "npm install && arch-meson build && meson install -C build",
@@ -47,10 +47,10 @@
     "@eslint/js": "latest",
     "@girs/adw-1": "latest",
     "@types/node": "^24.3.0",
-    "esbuild": "^0.25.9",
     "eslint": "latest",
     "nodemon": "^3.1.10",
     "typescript": "latest",
-    "typescript-eslint": "latest"
+    "typescript-eslint": "latest",
+    "ags": "*"
   }
 }

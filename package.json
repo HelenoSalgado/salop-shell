@@ -29,19 +29,20 @@
     "esbuild"
   ],
   "dependencies": {
-    "esbuild": "^0.25.9"
+    "esbuild": "^0.25.9",
+    "ags": "*"
   },
   "scripts": {
     "build:install": "npm install && arch-meson build && meson install -C build",
     "build:test": "meson setup --prefix \"$(pwd)/dist\" --reconfigure build && meson install -C build",
-    "start:dev": "meson setup --prefix \"$(pwd)/dist\" --reconfigure build && meson install -C build && dist/bin/salopbar"
+    "start:dev": "nodemon startdev.js"
   },
   "nodemonConfig": {
     "ext": "tsx,ts,css",
     "watch": [
       "src/"
     ],
-    "delay": "3500"
+    "delay": "2000"
   },
   "devDependencies": {
     "@eslint/js": "latest",
@@ -50,7 +51,6 @@
     "eslint": "latest",
     "nodemon": "^3.1.10",
     "typescript": "latest",
-    "typescript-eslint": "latest",
-    "ags": "*"
+    "typescript-eslint": "latest"
   }
 }

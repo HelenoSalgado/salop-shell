@@ -31,14 +31,13 @@ Para compilar e executar o Salop Bar, você precisará das seguintes dependênci
 
 ### Para Compilar (Build-time)
 
-Estas são necessárias para o processo de compilação.
 *   `meson`
 *   `npm`
 *   `esbuild`
 
 ### Para Executar (Runtime)
 
-Estas são necessárias para que o aplicativo funcione. Em sistemas baseados em Arch Linux, você pode instalar a maioria com o seguinte comando:
+Necessárias para que o aplicativo funcione.
 
 ```bash
 sudo pacman -S gjs gtk4 libadwaita gtk-layer-shell

@@ -12,7 +12,7 @@ export class App extends Gtk.Application {
 
   constructor() {
     super({
-      applicationId: "dev.heleno.salopbar",
+      applicationId: import.meta.domain,
       flags: Gio.ApplicationFlags.FLAGS_NONE,
     });
   }

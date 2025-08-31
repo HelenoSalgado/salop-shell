@@ -9,6 +9,7 @@ js = custom_target(
     '--external:gi://*',
     '--external:resource://*',
     '--external:system',
+    '--external:ags/*',
     '--format=esm',
     '--platform=node',
     '--sourcemap=inline',

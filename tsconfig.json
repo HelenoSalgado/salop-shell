@@ -9,6 +9,10 @@
     "jsx": "react-jsx",
     "jsxImportSource": "ags/gtk4",
     "removeComments": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "ags/*": ["./node_modules/ags/*"]
+    }
   }
 }

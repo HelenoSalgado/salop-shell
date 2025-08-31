@@ -26,11 +26,8 @@
     "linux"
   ],
   "bundleDependencies": [
-    "ags"
+    "esbuild"
   ],
-  "dependencies": {
-    "ags": "*"
-  },
   "scripts": {
     "build:install": "npm install && arch-meson build && meson install -C build",
     "build:test": "meson setup --prefix \"$(pwd)/dist\" --reconfigure build && meson install -C build",
@@ -44,6 +41,7 @@
     "delay": "3500"
   },
   "devDependencies": {
+    "ags": "*",
     "@eslint/js": "latest",
     "@girs/adw-1": "latest",
     "@types/node": "^24.3.0",

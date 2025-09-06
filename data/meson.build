@@ -25,6 +25,7 @@ dbusservicedir = join_paths(pkgdatadir, 'dbus-1', 'services')
 configure_file(
   configuration : {
      'name': name,
+     'domain': domain,
      'prefix': prefix,
      'bindir': bindir
   },

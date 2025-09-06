@@ -46,4 +46,5 @@ export class App extends Gtk.Application {
   vfunc_activate(): void {
     this.loadStyle();
   }
+
 }
